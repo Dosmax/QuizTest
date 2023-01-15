@@ -1,0 +1,38 @@
+ 
+#question-img {
+  max-width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.answer {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  min-height: 80px;
+}
+
+.selected {
+  background-color: lightgray;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+#result-counter {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+#restart-btn {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  margin-left: 20px;
+}

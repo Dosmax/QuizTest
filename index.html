@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question and Answer Test</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+
+  <div id="result-counter" class="d-none d-md-block bg-light p-3">
+    <p class="text-success">Correct: <span id="correct-count"></span></p>
+    <p class="text-danger">Wrong: <span id="wrong-count"></span></p>
+    <p>Percentage: <span id="percentage" class="font-weight-bold"></span>%</p>
+  </div>
+
+  <div class="col-12 text-center">
+    <button class="btn btn-danger" id="restart-btn" onclick="init()">Restart</button>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <img id="question-img" src="" class="mb-3">
+        <h2 id="question"></h2>
+        <p id="description"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 answer" id="answerA" onclick="selectAnswer('A')"></div>
+      <div class="col-3 answer" id="answerB" onclick="selectAnswer('B')"></div>
+      <div class="col-3 answer" id="answerC" onclick="selectAnswer('C')"></div>
+      <div class="col-3 answer" id="answerD" onclick="selectAnswer('D')"></div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <button class="btn btn-primary" id="verify-btn" onclick="verifyAnswer()">Verify</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
