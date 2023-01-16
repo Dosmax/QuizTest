@@ -15,6 +15,12 @@ Papa.parse("https://docs.google.com/spreadsheets/d/162pAjssS4Sz-z4L8h41-Bxa1uk8y
 });
  
 function showRandomQuestion() {
+
+  let checkboxes = document.querySelectorAll('.form-check-input');
+for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = false;
+}
+
   // Select a random question from 'questions' that has not been used yet
   var randomQuestionId = Math.floor(Math.random() * questions.length);
   while (usedQuestionIds.indexOf(randomQuestionId) !== -1) {
@@ -78,6 +84,14 @@ while (uniqueNumbers.length < 4) {
   document.querySelector("#answerC").innerHTML = NewPositionAnswer[2] ;
   document.querySelector("#answerD").innerHTML = NewPositionAnswer[3] ;
 
+let labelA = document.getElementById("labelA");
+labelA.innerHTML = NewPositionAnswer[0];
+let labelB = document.getElementById("labelB");
+labelB.innerHTML = NewPositionAnswer[1];
+let labelC = document.getElementById("labelC");
+labelC.innerHTML = NewPositionAnswer[2];
+let labelD = document.getElementById("labelD");
+if(currentQuestion.answerD) labelD.innerHTML = NewPositionAnswer[3];
 
   if (FinalNewCorrectAnswer === 0) { currentQuestion.correctAnswer = "A" } 
   else if (FinalNewCorrectAnswer === 1) {currentQuestion.correctAnswer = "B"}

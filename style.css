@@ -6,11 +6,20 @@
 }
 
 .answer {
-  padding: 10px;
   border: 1px solid black;
+ 
   cursor: pointer;
-  min-height: 80px;
+ 
+  display: inline-block;
+  
+ 
+  /* other styles */
 }
+
+pre {
+  white-space: pre-wrap;
+}
+
 
 .selected {
   background-color: lightgray;
@@ -36,3 +45,4 @@
   left: 0;
   margin-left: 20px;
 }
+ 
