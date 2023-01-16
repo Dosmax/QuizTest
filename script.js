@@ -158,6 +158,15 @@ function verifyAnswer() {
   updateCounter();
   }
 
+  function openModal() {
+    document.getElementById("img-modal").style.display = "block";
+    document.getElementById("img-modal-img").src = document.getElementById("question-img").src;
+  }
+  
+  function closeModal() {
+    document.getElementById("img-modal").style.display = "none";
+  }
+
   function init() {
     usedQuestionIds = [];
     correctAnswers = 0;
@@ -165,6 +174,7 @@ function verifyAnswer() {
     document.querySelector("#result-counter").classList.add("d-none");
     location.reload();
     showRandomQuestion();
+    
   }
   
   

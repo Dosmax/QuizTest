@@ -22,7 +22,12 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <img id="question-img" src="" class="mb-3">
+ 
+        <img id="question-img" src="" alt="Question Image" onclick="openModal();">
+        <div id="img-modal" class="modal">
+          <span class="close" onclick="closeModal();">&times;</span>
+          <img class="modal-content" id="img-modal-img">
+          
         <h2 id="question"></h2>
         <pre id="description" class="mb-0 text-break"></pre>
       </div>
@@ -57,12 +62,15 @@
     </ul>
     
     
-    <div class="row">
-      <div class="col-12 text-center">
-        <button class="btn btn-primary" id="verify-btn" onclick="verifyAnswer()">Verify</button>
-      </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <button class="btn btn-primary" id="verify-btn" onclick="verifyAnswer()">Verify</button>
     </div>
   </div>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
