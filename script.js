@@ -4,6 +4,7 @@ var selectedAnswer = "";
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var usedQuestionIds = [];
+var teste = [];
 
 Papa.parse("https://docs.google.com/spreadsheets/d/162pAjssS4Sz-z4L8h41-Bxa1uk8yiTpoe0-aauYuYyo/export?format=csv", {
   download: true,
